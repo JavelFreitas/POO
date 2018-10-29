@@ -47,24 +47,19 @@
    #### Quanto tempo levou pra fazer a atividade?  
    Cinco horas, sendo duas para implementar soluções para acabar com os bugs e os "segmentation fault".
    
-# Atividade do Contato - Trabalho 3.
-   
+# Atividade do Contato melhorada - Trabalho 3.
+
    #### O que você fez?
-   Fiz um código que dá um nome a um contato e adiciona, remove, atualiza e mostra os números.  
-   
+   Código do contato que inicia um contato que pode ter uma lista de telefones. O código permite que  
+   telefones sejam adicionados, removidos e atualizados em lote. 
    #### Com quem e como você fez?
-   Tive ajuda de monitor, professor e colegas para entender certos erros, e quando não via como  
-   implementar minha lógica, pesquisava na internet. Em certo ponto estudei o código do professor  
-   para ver como ele tinha feito e após trabalhei no meu.
-   
+   Sozinho, usando os conhecimentos adiquiridos no Trabalho da Topic melhorada, e pesquisando no google.
    #### O que aprendeu e sabe fazer?
-   Usar métodos de outras classes com "classe"::"método" e descobri o isdigit() que foi muito útil
-   
+   Receber vários inputs e realizar a mesma ação para partes segmentadas deles tendo um controle  
+   de validade.
    #### O que tem dificuldade ainda?
-   O conteúdo de maneira geral, de como passar o que eu penso para o código, e sinto em mim uma  
-   escassez em quanto ao conhecimento das ferramentas geralmente utilizadas.
-   
+   Apagar um ponteiro de um vector de outras maneiras se mostrou um desafio a ser superado.
    #### Quanto tempo levou para fazer essa atividade?
-   Mais ou menos 14 horas.
-   
+   2 hora e 9 minutos.  
+   (Apendendo a usar o git para upar pelo terminal, ja mando o código)
    
