@@ -1,0 +1,23 @@
+addAlu 1 a e
+addALu 2 r a
+addPro 10 tim
+addPro 11 elvis
+addDis QX10 mat
+addDis QX13 cara
+showAlu
+showPro
+showDis
+rmAlu 1
+rmPro 11
+rmDis QX13
+showAlu
+showPro
+showDis
+getAlu 2
+getPro 10
+getDis QX10
+showAlu
+showPro
+showDis
+manual
+end
