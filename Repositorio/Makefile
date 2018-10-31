@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -o -Wall -std=c++14 -g
 
 
-TARGET = Contato
+TARGET = repositorio
 
 all: $(TARGET)
 $(TARGET): $(TARGET).cpp

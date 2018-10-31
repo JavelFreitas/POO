@@ -1,0 +1,7 @@
+addAlu 0 ES Diego Feitoza 
+addAlu 1 ES Diego Damasceno
+addAlu 2 ES Hugo Rodrigues
+addAlu 3 ES Matheus Paiva
+showAlu
+rmAlu 0
+getAlu 2
