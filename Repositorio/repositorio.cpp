@@ -114,28 +114,73 @@ struct Repository{
     }
 
 };
-// Make the repository work with other classes;
+
 struct Controller{
+
     Repository<Student> rstu;
+    Repository<Teacher> rtea;
+    Repository<Subject> rsub;
+
+//This code can still be shortened
+
     void shell(string line){
         stringstream in(line);
         string op, newKey;
         in >> op;
-        if(op == "addAlu"){
-            string reg, prog, newName;
-            in >> reg >> prog;
-            getline(in, newName);
-            newName = newName.substr(1);
-            rstu.add(reg, Student(reg, prog, newName));
-        }else if(op == "showAlu"){
-            cout << rstu.toString(rstu.getValues());
-        }else if(op == "rmAlu"){
+        if(op == "addAlu" || op == "addPro" || op == "addDis" ){
+            string newReg, newProg, newName;
+            if(op == "addAlu"){
+                in >> newReg >> newProg;
+                getline(in, newName);
+                newName = newName.substr(1);
+                rstu.add(newReg, Student(newReg, newProg, newName));
+            }else if(op == "addPro"){
+                in >> newReg;
+                getline(in, newName);
+                newName = newName.substr(1);
+                rtea.add(newReg, Teacher(newReg, newName));
+            }else{
+                in >> newReg;
+                getline(in, newName);
+                newName = newName.substr(1);
+                rsub.add(newReg, Subject(newReg, newName));
+            }
+        }else if(op == "showAlu" || op == "showPro" || op == "showDis"){
+            if(op == "showAlu")
+                cout << rstu.toString(rstu.getValues());
+            else if(op == "showPro")
+                cout << rtea.toString(rtea.getValues());
+            else
+                cout << rsub.toString(rsub.getValues());
+        }else if(op == "rmAlu"|| op == "rmPro" || op == "rmDis"){
             in >> newKey;
-            rstu.rm(newKey);
-        }else if(op == "getAlu"){
+            if(op == "rmAlu"){
+                rstu.rm(newKey);
+            }else if(op == "rmPro"){
+                rtea.rm(newKey);
+            }else{
+                rsub.rm(newKey);
+            }
+        }else if(op == "getAlu"|| op == "getPro" || op == "getDis"){
             in >> newKey;
-            Student& stu = rstu.getV(newKey);
-            cout << stu.toString() << endl;
+            if(op == "getAlu"){
+                Student& stu = rstu.getV(newKey);
+                cout << stu.toString() << endl; 
+            }else if(op == "getPro"){
+                Teacher& tea = rtea.getV(newKey);
+                cout << tea.toString() << endl;
+            }else{
+                Subject& sub = rsub.getV(newKey);
+                cout << sub.toString() << endl;
+            }
+        }else if(op == "help"){
+            cout << endl
+                 << "showAlu showPro showDis\n"
+                 << "addAlu _mat _curso _nome, addPro _siape _nome, addDis _cod _nome\n"
+                 << "rmAlu _mat, rmPro _siape, rmDis _cod\n"
+                 << "getAlu _mat, getPro _siape, getDis _cod\n"
+                 << "help\n";
+        
         }else{
             throw "Command do not exist";
         }
@@ -157,13 +202,9 @@ struct Controller{
             }
         }
     }
-
 };
-
 int main(){
     Controller t;
     t.exec();
     return 0;
 }
-    // Repository<Teacher> rtea;
-    // Repository<Subject> rsub;

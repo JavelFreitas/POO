@@ -2,7 +2,8 @@
 #include <vector>
 #include <algorithm>
 #include <map>
-#include <sstream> 
+#include <sstream>
+#include <fstream> 
 using namespace std;
 
 class Student{
@@ -115,88 +116,103 @@ struct Repository{
 
 };
 
-struct Controller{
+class Controller{
 
     Repository<Student> rstu;
     Repository<Teacher> rtea;
     Repository<Subject> rsub;
 
+public:
+
 //This code can still be shortened
 
-    void shell(string line){
-        stringstream in(line);
-        string op, newKey;
-        in >> op;
-        if(op == "addAlu" || op == "addPro" || op == "addDis" ){
-            string newReg, newProg, newName;
-            if(op == "addAlu"){
-                in >> newReg >> newProg;
-                getline(in, newName);
-                newName = newName.substr(1);
-                rstu.add(newReg, Student(newReg, newProg, newName));
-            }else if(op == "addProf"){
-                in >> newReg;
-                getline(in, newName);
-                newName = newName.substr(1);
-                rtea.add(newReg, Teacher(newReg, newName));
+    string shell(string line){
+        try{    
+            stringstream in(line);
+            stringstream out;
+            string op, newKey;
+            in >> op;
+            if(op == "addAlu" || op == "addPro" || op == "addDis" ){
+                string newReg, newProg, newName;
+                if(op == "addAlu"){
+                    in >> newReg >> newProg;
+                    getline(in, newName);
+                    newName = newName.substr(1);
+                    rstu.add(newReg, Student(newReg, newProg, newName));
+                }else if(op == "addPro"){
+                    in >> newReg;
+                    getline(in, newName);
+                    newName = newName.substr(1);
+                    rtea.add(newReg, Teacher(newReg, newName));
+                }else{
+                    in >> newReg;
+                    getline(in, newName);
+                    newName = newName.substr(1);
+                    rsub.add(newReg, Subject(newReg, newName));
+                }
+            }else if(op == "showAlu" || op == "showPro" || op == "showDis"){
+                if(op == "showAlu")
+                    cout << rstu.toString(rstu.getValues());
+                else if(op == "showPro")
+                    cout << rtea.toString(rtea.getValues());
+                else
+                    cout << rsub.toString(rsub.getValues());
+            }else if(op == "rmAlu"|| op == "rmPro" || op == "rmDis"){
+                in >> newKey;
+                if(op == "rmAlu"){
+                    rstu.rm(newKey);
+                }else if(op == "rmPro"){
+                    rtea.rm(newKey);
+                }else{
+                    rsub.rm(newKey);
+                }
+            }else if(op == "getAlu"|| op == "getPro" || op == "getDis"){
+                in >> newKey;
+                if(op == "getAlu"){
+                    Student& stu = rstu.getV(newKey);
+                    cout << stu.toString() << endl; 
+                }else if(op == "getPro"){
+                    Teacher& tea = rtea.getV(newKey);
+                    cout << tea.toString() << endl;
+                }else{
+                    Subject& sub = rsub.getV(newKey);
+                    cout << sub.toString() << endl;
+                }
             }else{
-                in >> newReg;
-                getline(in, newName);
-                newName = newName.substr(1);
-                rsub.add(newReg, Subject(newReg, newName));
+                throw "Command do not exist";
             }
-        }else if(op == "showAlu" || op == "showPro" || op == "showDis"){
-            if(op == "showAlu")
-                cout << rstu.toString(rstu.getValues());
-            else if(op == "showPro")
-                cout << rtea.toString(rtea.getValues());
-            else
-                cout << rsub.toString(rsub.getValues());
-        }else if(op == "rmAlu"|| op == "rmPro" || op == "rmDis"){
-            in >> newKey;
-            if(op == "rmAlu"){
-                rstu.rm(newKey);
-            }else if(op == "rmPro"){
-                rtea.rm(newKey);
-            }else{
-                rsub.rm(newKey);
-            }
-        }else if(op == "getAlu"|| op == "getPro" || op == "getDis"){
-            in >> newKey;
-            if(op == "getAlu"){
-                Student& stu = rstu.getV(newKey);
-                cout << stu.toString() << endl; 
-            }else if(op == "getPro"){
-                Teacher& tea = rtea.getV(newKey);
-                cout << tea.toString() << endl;
-            }else{
-                Subject& sub = rsub.getV(newKey);
-                cout << sub.toString() << endl;
-            }
-        }else{
-            throw "Command do not exist";
+            throw "^Done";
+        }catch(const char * warning){
+            cout << warning << endl;
         }
-        throw "^Done";
     }
 
-    void exec(){
+    void tester(){
+        ifstream archive ("teste.txt");
         string line;
-        while(true){
-            getline(cin, line);
-            if(line == "end"){
-                return;
-            }else{
-                try{
-                    shell(line);
-                }catch(const char * warning){
-                    cout << warning << endl;
+        if(archive.is_open()){
+            while(!archive.eof()){
+                getline(archive, line);
+                if(line == "manual"){
+                    while(line != "end"){
+                        getline(cin, line);
+                        cout << " " << shell(line) << endl;
+                    }
+                }else if(line == "end"){
+                    break;
                 }
+                cout << line << endl;
+                cout << " " << shell(line) << endl;
             }
+            archive.close();
+        }else{
+            cout << "Cannot open this archive\n";
         }
     }
 };
+
 int main(){
     Controller t;
-    t.exec();
+    t.tester();
     return 0;
 }

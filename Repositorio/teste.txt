@@ -1,7 +1,24 @@
-addAlu 0 ES Diego Feitoza 
-addAlu 1 ES Diego Damasceno
-addAlu 2 ES Hugo Rodrigues
-addAlu 3 ES Matheus Paiva
+manual
+addAlu 1 a ea
+addALu 2 r aa
+addPro 10 tim
+addPro 11 elvis
+addDis QX10 mat
+addDis QX13 cara
 showAlu
-rmAlu 0
+showPro
+showDis
+rmAlu 1
+rmPro 11
+rmDis QX13
+showAlu
+showPro
+showDis
 getAlu 2
+getPro 10
+getDis QX10
+showAlu
+showPro
+showDis
+manual
+end
