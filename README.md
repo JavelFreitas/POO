@@ -97,4 +97,3 @@
    
 # Atividade do **Serviço de Anotações** - Trabalho 09
    *Em andamento...*  
-   Olhar --> [Aprender a criar e usar a SSH Key](https://help.github.com/articles/connecting-to-github-with-ssh/ "Connecting to GitHub with SSH")
