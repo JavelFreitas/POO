@@ -27,7 +27,7 @@ public:
 class User{
     string id;
     string pass;
-  Segredo seg;
+    Segredo seg;
 public:
     User(string id = "", string pass = ""){
         this->id = id;

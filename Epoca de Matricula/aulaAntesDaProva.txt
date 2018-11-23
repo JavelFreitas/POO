@@ -1,0 +1,9 @@
+medico.h
+
+medico.cpp
+
+paciente.h
+
+paciente.cpp
+
+main.cpp

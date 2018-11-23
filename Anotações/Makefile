@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -o -Wall -std=c++14 -g
 
 #Coloca o nome da parada aqui
-TARGET = segredos
+TARGET = anotacoes
 
 all: $(TARGET)
 $(TARGET): $(TARGET).cpp

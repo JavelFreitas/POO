@@ -1,6 +1,6 @@
-#include <iostream> // Refazer código com herança quando tiver tempo
-#include <vector>
-#include <sstream>
+#include <iostream> // Refazer código com herança quando tiver tempo.
+#include <vector>  // perguntar onde e como fazer o destrutor de cada classe.
+#include <sstream> // matricular materia tem que ser privado?
 #include <map>
 #include <fstream>
 using namespace std;
@@ -10,7 +10,7 @@ class Discp;
 class Aluno{
 
     string idAluno;
-    vector<Discp> m_discp;
+    vector<Discp> m_discp; //fazer com mapas
 
 public:
 
@@ -33,13 +33,14 @@ public:
     }
 
     friend class Discp; // Concede permissão à classe Discp
+    //imprimir a pessoa = imprimir todas as matérias, tentar fazer o ostream
 
 };
 
 class Discp{
 
     string idDiscp;
-    vector<Aluno> m_aluno;
+    vector<Aluno> m_aluno; // tentar utilizar mapas
 
 public:
 
@@ -78,17 +79,13 @@ void Aluno::matricular(Discp discp){ // Realiza matricula do aluno aqui por caus
 template <typename T>
 class Repositorio{
     
-    string className;
+    string typeName;
     map<string, T> mapa;
 
 public:
 
     Repositorio(string nome = ""){
-        if(is_same<T, Aluno>::value){
-            this->className = "aluno";
-        }else if(is_same<T, Discp>::value){
-            this->className = "disciplina";
-        }
+        className = nome;
 
     }
 
@@ -97,7 +94,7 @@ public:
         if(!has(key)){
             mapa[key] = t;
         }else{
-            cout << "Key " + key + " already exists, try another";
+            cout << nome <<  key + " already exists, try another";
         }
     }
 
@@ -106,7 +103,7 @@ public:
     }
 
     void rm(string key){
-
+        //usa o metodo de desmatricular;
     }
 
     bool has(string key){
@@ -139,9 +136,10 @@ class Controller{
 
 public:
 
-    Controller(){
-        Repositorio<Aluno> r_alu;
-        Repositorio<Discp> r_dis;
+    Controller():
+        r_aluno("aluno"),
+
+    { // r_alu("aluno") , r_dis("disciplina")
     }
 
     string shell(string line){

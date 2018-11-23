@@ -1,6 +1,6 @@
-#include <iostream> // Refazer código com herança quando tiver tempo
-#include <vector>
-#include <sstream>
+#include <iostream> // Refazer código com herança quando tiver tempo.
+#include <vector>  // perguntar onde e como fazer o destrutor de cada classe.
+#include <sstream> // matricular materia tem que ser privado?
 #include <map>
 #include <fstream>
 using namespace std;
@@ -10,7 +10,7 @@ class Discp;
 class Aluno{
 
     string idAluno;
-    vector<Discp> m_discp;
+    vector<Discp> m_discp; //fazer com mapas
 
 public:
 
@@ -33,13 +33,14 @@ public:
     }
 
     friend class Discp; // Concede permissão à classe Discp
+    //imprimir a pessoa = imprimir todas as matérias, tentar fazer o ostream
 
 };
 
 class Discp{
 
     string idDiscp;
-    vector<Aluno> m_aluno;
+    vector<Aluno> m_aluno; // tentar utilizar mapas
 
 public:
 
@@ -67,6 +68,8 @@ public:
 
 
 void Aluno::matricular(Discp discp){ // Realiza matricula do aluno aqui por causa do foward declaration
+// se a disciplina existe e ainda não está matriculada, colocar aluno na disciplina e vice versa
+
 
 }
 
@@ -76,17 +79,13 @@ void Aluno::matricular(Discp discp){ // Realiza matricula do aluno aqui por caus
 template <typename T>
 class Repositorio{
     
-    string className;
+    string typeName;
     map<string, T> mapa;
 
 public:
 
     Repositorio(string nome = ""){
-        if(is_same<T, Aluno>::value){
-            this->className = "aluno";
-        }else if(is_same<T, Discp>::value){
-            this->className = "disciplina";
-        }
+        className = nome;
 
     }
 
@@ -95,7 +94,7 @@ public:
         if(!has(key)){
             mapa[key] = t;
         }else{
-            cout << "Key " + key + " already exists, try another";
+            cout << nome <<  key + " already exists, try another";
         }
     }
 
@@ -104,7 +103,7 @@ public:
     }
 
     void rm(string key){
-
+        //usa o metodo de desmatricular;
     }
 
     bool has(string key){
@@ -137,27 +136,52 @@ class Controller{
 
 public:
 
-    Controller(){
-        Repositorio<Aluno> r_alu;
-        Repositorio<Discp> r_dis;
+    Controller():
+        r_aluno("aluno"),
+
+    { // r_alu("aluno") , r_dis("disciplina")
     }
 
     string shell(string line){
         stringstream in(line);
         stringstream out;
-        string op, newAlu;
+        string op, Alu, Dis;
         in >> op;
 
         try{
+
             if(op == "la"){
+                
                 out << "alunos\n";
                 vector<Aluno> va = r_alu.getAll();
                 for(auto& alu : va){
                     out << "   " << alu.getIdAluno() << "\n";
                 }
-            }else if(op == "nwalu"){
-                while(in >> newAlu){
-                    r_alu.add(newAlu, Aluno(newAlu));
+                out << "  disciplinas\n";
+                vector<Discp> vd = r_dis.getAll();
+                for(auto& dis : vd){
+                    out << "   " << dis.getIdDiscp() << "\n";
+                }
+
+
+            }else if(op == "nwalu" || op == "nwdis"){
+
+                if(op == "nwalu"){
+                    while(in >> Alu){
+                        r_alu.add(Alu, Aluno(Alu));
+                    }
+                }else if(op == "nwdis"){
+                    while(in >> Dis){
+                        r_dis.add(Dis, Discp(Dis));
+                    }
+                }
+
+            }else if(op == "mat"){
+                in >> Alu; //receber nome do aluno
+                while(in >> Dis){ //receber todas as materias que ele vai ser matriculado
+                    // enquanto houver materias, ter certeza que elas existem, caso contrario, informar ao aluno que esta materia nao existe
+                    // se a materia existir, verificar se o aluno ja nao possue a materia no seu vector
+                    // caso ele nao a tiver, adicionar tal materia no vector do aluno, e do void Matricular do aluno adiciona-lo a materia;
                 }
             }
             
