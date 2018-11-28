@@ -5,6 +5,46 @@
 
 using namespace std;
 
+class Entry {
+    bool favorito;
+public:
+    Entry();
+    virtual ~Entry() = 0;
+    virtual string getId() = 0;
+    virtual void setFavorited(bool value) = 0;
+    virtual bool isFavorited() = 0;
+    virtual string toString() = 0;
+};
+
+class Note : public Entry { 
+    string id;
+    vector<string> itens;
+    bool favorito {0};
+public:
+    Note(string id = "")
+        :id(id)
+    {}
+    string getId(){
+        return id;
+    }
+    void setFavorited(bool value){
+        this->favorito = value;
+    }
+    bool isFavorited(){
+        return this->favorito;
+    }
+    void addItem(string item){
+        itens.push_back(item);
+    }
+    string toString(){
+        string saida = Entry::toString() + " N [ ";
+        for(auto item : itens){
+            saida += item + " ";
+        }
+        return saida + "]";
+    }
+};
+
 class Fone {
 public:
     string id;
@@ -24,7 +64,7 @@ public:
     }
 };
 
-class Contato {
+class Contato : public Entry{
     string name;
     vector<Fone> fones;
     bool favorito {0};
@@ -33,15 +73,15 @@ public:
         this->name = name;
     }
 
-    string getName(){
+    string getId(){
         return name;
     }
 
-    void setFav(bool chance){
-        this->favorito = chance;
+    void setFavorited(bool value){
+        this->favorito = value;
     }
 
-    bool getFav(){
+    bool isFavorited(){
         return this->favorito;
     }
 
@@ -85,7 +125,7 @@ class Agenda {
 
 public:
     void addContato(Contato cont){
-        string name = cont.getName();
+        string name = cont.getId();
         vector<Fone> fones = cont.getFones();
         if(exists(name)){
             for(auto fone : fones){
@@ -122,7 +162,7 @@ public:
 
     void favoritar(string name){
         if(exists(name)){
-            contatos[name].setFav(1);
+            contatos[name].setFavorited(1);
             favoritos[name] = getContato(name);
         }else{
             throw "O nome nao e um contato";
@@ -131,19 +171,19 @@ public:
 
     void desfavoritar(string name){
         if(exists(name)){
-            contatos[name].setFav(0);
+            contatos[name].setFavorited(0);
             favoritos.erase(name);
         }else{
             throw "O nome nao e um contato";
         }
     }
 
-    vector<Contato> getFavoritos(){
+    vector<Contato> isFavoritedoritos(){
         vector<Contato> resp;
         for(auto& par : favoritos)
             resp.push_back(*par.second);
         // for(auto cont : getContatos()){
-        //     if(cont.getFav()){
+        //     if(cont.isFavorited()){
         //         resp.push_back(cont);
         //     }
         
@@ -164,6 +204,13 @@ public:
             saida += contato.toString() + "\n";
         return saida;
     }
+};
+
+class AgendaMaster : public Agenda{
+public:
+    AgendaMaster();
+    Contato * getContato(string id);
+    Note * getNote(string id);
 };
 
 class Controller {
@@ -221,7 +268,7 @@ public:
             throw string("done");
         }else if(op == "showFav"){
             string saida = "";
-            auto favs = agenda.getFavoritos();
+            auto favs = agenda.isFavoritedoritos();
             for(auto contato : favs)
                 saida += contato.toString() + "\n";
             throw saida;
