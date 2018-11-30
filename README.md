@@ -61,6 +61,18 @@
    (Aprendi a usar git pelo terminal, agora só falta aprender a criar uma SSH key para parar
    de botar nome de usuário e senha toda vez que mando algo.
    
+# Atividade do Banco - Trabalho 4.
+   ## Em andamento...
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   Sozinho
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+   
 # Atividade do Tamagoshi - Trabalho 05
 
    #### O que você fez?
@@ -75,6 +87,33 @@
    o **Serviço de Anotações**.
    #### Quanto tempo levou para fazer essa atividade?
    Na época, acho que dois dias.
+   
+# Atividade do Agiota - Trabalho 6.
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
+# Atividade do Agiota com Repositório - Trabalho 7.
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
    
 # Atividade do Repositório - Trabalho 08
    
@@ -96,4 +135,66 @@
    tório.
    
 # Atividade do **Serviço de Anotações** - Trabalho 09
-   *Em andamento...*  
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
+# Atividade do Salário - Trabalho 10.
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
+# Atividade do Trem - Trabalho 11.
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
+# Atividade do Matrícula - Trabalho 12
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
+
+# Atividade do Twitter - Trabalho 13.
+   ## Em andamento...
+   
+   #### O que você fez?
+   
+   #### Com quem e como você fez?
+   
+   #### O que aprendeu e sabe fazer?
+   
+   #### O que tem dificuldade ainda?
+   
+   #### Quanto tempo levou para fazer essa atividade?
