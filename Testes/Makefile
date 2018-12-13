@@ -2,9 +2,9 @@ CC = g++
 CFLAGS = -o -Wall -std=c++14 -g
 
 #Coloca o nome da parada aqui
-TARGET = teste
+TARGET = testedois
 
 all: $(TARGET)
 $(TARGET): $(TARGET).cpp
 	$(CC) $(CFLAGS) $(TARGET).cpp -o $(TARGET) 	
-	./$(TARGET)
+	./$(TARGET) <teste.txt

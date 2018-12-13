@@ -2,65 +2,108 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <locale.h>
 using namespace std;
 #if 0
-class Operacao
-+ indice: int
-+ descricao: string
-+ valor: float
-+ saldo: float
+verificar
+    deposito nao pode ser negativo
+    nao pode sacar mais do que se tem no saldo 
+depositar
+    coloca dinheiro na conta
+sacar   
+    você tira dinheiro da conta
+tarifa
+    o estado tira dinheiro da sua conta
+extornar
+    retorna um valor anterior á conta, escolhe um índice, pega o valor dele e retorna pra conta
+extrato
+    mostra todas as operações
+extratoN _n
+    escolhe a quantidade de operações(sempre as ultimas) a serem mostradas
 
-class Conta
-- nextId: int //id da próxima operaçao
-- saldo: float
-- numero: int
-- extrato: Operacao[]
---
-+ pushOperation(label: string, value: float, saldo: float) // usado para alterar saldo e extrato
-+ debitar(label: string, value: float) : boolean //usado para saque e tarifa
-+ creditar(label: string, value: float) : boolean // usado para extorno e depósito
-+ getExtratoN(N: int): Operacao[] //retorna as última n operacoes
 #endif
+class Operacao{
+public:
+    
+    int indice;
+    string descricao;
+    float valor;
+    float saldo;
 
-class Controller{
+};
+
+class Conta{
+
+    int nextId; //id da próxima operaçao
+    float saldo; 
+    int numero;
+    vector<Operacao> extrato;
 
 public:
 
+    Conta(int saldo = 0){
+        this->saldo = saldo;
+    }
 
+    void pushOperation(string label, float value, float saldo){
+
+    } // usado para alterar saldo e extrato
+
+    bool debitar(string label , float value){
+
+    } //usado para saque e tarifa
+
+    bool creditar(string label, float value){
+
+    } // usado para extorno e depósito
+
+    vector<Operacao> getExtratoN(int N){
+
+    } //retorna as última n operacoes
+};
+
+class Controller{
+    Conta cont;
+public:
 
     string shell(string line){
         stringstream in(line);
         stringstream out;
         string op;
+        int newSaldo;
         in >> op;
+        if(op == "init"){
+            in >> newSaldo;
+            cont = Conta(newSaldo);
+        }
+
+
+
+
+        else{
+            throw "Comando não valido!";
+        }
     }
 
     void exec(){
-        ifstream archive ("testes2.txt");
         string line;
-        if(archive.is_open()){
-            while(!archive.eof()){
-                getline(archive, line);
-                if(line == "manual"){
-                    while(line != "end"){
-                        getline(cin, line);
-                        cout << shell(line) << endl;
-                    }
-                }else if(line == "end"){
-                    break;
-                }
-                cout << line << endl;
-                cout << shell(line) << endl;
+        while(true){
+            getline(cin, line);
+            if(line == "end"){
+                return;
             }
-            archive.close();
-        }else{
-            cout << "Cannot open this archive";
+            try{
+                shell(line);
+            }catch(const char * warning){
+                cout << warning << endl;
+            }
         }
     }
 
 };
 
 int main(){
+    setlocale(LC_ALL, "Portuguese");
     Controller t;
     t.exec();
     return 0;

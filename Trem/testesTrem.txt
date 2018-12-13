@@ -1,0 +1,25 @@
+init 4
+nwvp 2
+nwvp 1
+nwvc 120
+nwvc 60
+show
+addp rufus
+addp tim_maia
+addp thomas
+addc cheetos 29.1
+addc cheetos 60.0
+addc ruffles 59.1
+addc nutela 59.1
+show
+desemb davi
+show
+desemb rufus
+show
+desemb tim_maia
+show
+desemb cheetos
+show
+desemb ruffles
+show
+end

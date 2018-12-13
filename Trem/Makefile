@@ -2,9 +2,9 @@ CC = g++
 CFLAGS = -o -Wall -std=c++14 -g
 
 
-TARGET = teste
+TARGET = trem
 
 all: $(TARGET)
 $(TARGET): $(TARGET).cpp
 	$(CC) $(CFLAGS) $(TARGET).cpp -o $(TARGET) 	
-	./$(TARGET)
+	./$(TARGET) <testesTrem.txt
