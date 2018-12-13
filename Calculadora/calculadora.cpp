@@ -10,7 +10,7 @@ struct Calculadora{
         this->bateria = 5;
         this->batmax = 0;
     }
-
+// oi mundo feio
     void gastarBateria(){
         if(this->bateria<=0){
             cout << "fail: bateria insuficiente";
