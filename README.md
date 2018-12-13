@@ -161,17 +161,18 @@
    #### Quanto tempo levou para fazer essa atividade?
 
 # Atividade do Trem - Trabalho 11.
-   ## Em andamento...
    
    #### O que você fez?
-   
+   Fiz um código que simula como um trem funcionaria dentro do polimorfismo e herança.
    #### Com quem e como você fez?
-   
+   Fiz sozinho, olhei um pouco de polimorfismo pela internet, minha meta agora é fazer aquela canção do "e o  
+   pintinho piu" com polimorfismo e herança.
    #### O que aprendeu e sabe fazer?
-   
+   aprendi a ver o fluxo de responsabilidades e dados passados para cada classe.
    #### O que tem dificuldade ainda?
-   
+   Tenho dificuldade na parte do Tie e Untie, mas ja estou trabalhando nisso
    #### Quanto tempo levou para fazer essa atividade?
+   dois dias
 
 # Atividade do Matrícula - Trabalho 12
    ## Em andamento...
