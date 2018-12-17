@@ -63,10 +63,11 @@
    
 # Atividade do Banco - Trabalho 4.
    ## Em andamento...
-   #### O que você fez?
    
+   #### O que você fez?
+   Estudei o conteúdo contido na atividade.
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido nela.
+   Sozinho.
    #### O que aprendeu e sabe fazer?
    Aprendi a manipular uma string para guardar informações e utilizá-la novamente para realizar operações
    #### O que tem dificuldade ainda?
@@ -93,22 +94,23 @@
    ## Em andamento...
       
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade.
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido na atividade.
+   Sozinho.
    #### O que aprendeu e sabe fazer?
    Mecher com o fluxo de informação e o "storage" dela.
    #### O que tem dificuldade ainda?
    Utilizar um Id que não seja um número, mas um cpf por exemplo.
    #### Quanto tempo levou para fazer essa atividade?
    levaria 8 horas.
+   
 # Atividade do Agiota com Repositório - Trabalho 7.
    ## Em andamento...
    
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido na atividade, fiz primeiro o **Repositório** para aprender a lógica de guardar  
+   Sozinho, fiz primeiro o **Repositório** para aprender a lógica de guardar  
    diferentes tipos de informação.
    #### O que aprendeu e sabe fazer?
    Aprendi a adaptar um código para uma nova lógica e ferramenta.
@@ -141,9 +143,9 @@
    ## Em andamento...
    
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido na atividade e Fiz o Segredos.
+   Sozinho, fiz o Segredos para aprender a lógica dessa atividade.
    #### O que aprendeu e sabe fazer?
    Aprendi a fazer um Gerenciador de Login para lidar com comandos de logar, e deslogar, e verificar se  
    existe algum usuário logado durante a execução do programa.
@@ -151,20 +153,23 @@
    Tenho dificuldade em colocar mais de um sistema para terem seu login gerenciado pela mesma classe.
    #### Quanto tempo levou para fazer essa atividade?
    levaria 8 horas.
+   
 # Atividade do Salário - Trabalho 10.
    ## Em andamento...
    
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido no trabalho.
+   Sozinho.
    #### O que aprendeu e sabe fazer?
    Noções teóricas de economia (tarifa, taxa SELIC, etc...), gerenciar o fluxo de informação de vários  
-   funcionários e como cada um tería seu próprio conjunto de regras para o calculo de salário.
+   funcionários e como cada um tería seu próprio conjunto de regras para o calculo de salário. E também  
+   aprendi a usar o enum.
    #### O que tem dificuldade ainda?
    Adicionar certos elementos.
    #### Quanto tempo levou para fazer essa atividade?
    Levaria 8 horas.
+   
 # Atividade do Trem - Trabalho 11.
    
    #### O que você fez?
@@ -183,9 +188,9 @@
    ## Em andamento...
    
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido no trabalho.
+   Sozinho, Fiz a prova (Contatos favoritos) para aprender um pouco da lógica dessa questão.
    #### O que aprendeu e sabe fazer?
    Usar o repositório para Alunos e Disciplinas, e por cima disso matricular um aluno em uma disciplina ao mesmo  
    tempo que liga a disciplina ao aluno e vice-versa
@@ -193,13 +198,14 @@
    Tenho um pouco de dificuldade com a lógica de tie e untie, estou tentando aplicar ela para multiplos elementos
    #### Quanto tempo levou para fazer essa atividade?
    levaria 12 horas
+   
 # Atividade do Twitter - Trabalho 13.
    ## Em andamento...
    
    #### O que você fez?
-   
+   Estudei o conteúdo contido na atividade
    #### Com quem e como você fez?
-   Sozinho, estudei o conteúdo contido no trabalho.
+   Sozinho.
    #### O que aprendeu e sabe fazer?
    Usar tudo ensinado anteriormente para que Usuários possam seguir uns aos outros, que eles possam twittar  
    e ver se alguém que os seguiu twittou, dar um like no twitte, ver quem deu like em um específico, etc.
@@ -208,3 +214,18 @@
    lógica pode resolver o segundo problema.
    #### Quanto tempo levou para fazer essa atividade?
    levaria 1 dia
+# Atividade da Prova (Contatos favoritos).
+
+   #### O que você fez?
+   Fiz um cógido que simula o código dos contatos mas com a funcionalidade de adicionar favoritos
+   #### Com quem e como você fez?
+   Sozinho, depois que o professor passou o código base para a turma, desenvolvi métodos para fazer a lógica  
+   dos "favoritos".
+   #### O que aprendeu e sabe fazer?
+   Favoritar uma classe (Usuário, Twitte, Motorista do Uber, etc..[CLasses de outros códigos]).
+   #### O que tem dificuldade ainda?
+   A segunda parte da lógica do tie e untie, estou resolvendo esse problema.
+   #### Quanto tempo levou para fazer essa atividade?
+   para terminá-la, levaria mais 7 horas.
+   
+# End
