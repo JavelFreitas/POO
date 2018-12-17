@@ -66,13 +66,14 @@
    #### O que você fez?
    
    #### Com quem e como você fez?
-   Sozinho
+   Sozinho, estudei o conteúdo contido nela.
    #### O que aprendeu e sabe fazer?
-   
+   Aprendi a manipular uma string para guardar informações e utilizá-la novamente para realizar operações
    #### O que tem dificuldade ainda?
-   
+   Nessa atividade, multiplas modificações.
    #### Quanto tempo levou para fazer essa atividade?
-   
+   Levaria 5 horas para implementar com as multiplas modificações
+
 # Atividade do Tamagoshi - Trabalho 05
 
    #### O que você fez?
@@ -90,30 +91,32 @@
    
 # Atividade do Agiota - Trabalho 6.
    ## Em andamento...
-   
+      
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido na atividade.
    #### O que aprendeu e sabe fazer?
-   
+   Mecher com o fluxo de informação e o "storage" dela.
    #### O que tem dificuldade ainda?
-   
+   Utilizar um Id que não seja um número, mas um cpf por exemplo.
    #### Quanto tempo levou para fazer essa atividade?
-
+   levaria 8 horas.
 # Atividade do Agiota com Repositório - Trabalho 7.
    ## Em andamento...
    
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido na atividade, fiz primeiro o **Repositório** para aprender a lógica de guardar  
+   diferentes tipos de informação.
    #### O que aprendeu e sabe fazer?
-   
+   Aprendi a adaptar um código para uma nova lógica e ferramenta.
    #### O que tem dificuldade ainda?
-   
+   Tenho dificuldade com tudo aquilo que se relaciona com a economia da questão (apenas noções teóricas de sacar, tarifa,  
+   etc...).
    #### Quanto tempo levou para fazer essa atividade?
-
+   levaria 5 horas.
    
 # Atividade do Repositório - Trabalho 08
    
@@ -140,26 +143,28 @@
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido na atividade e Fiz o Segredos.
    #### O que aprendeu e sabe fazer?
-   
+   Aprendi a fazer um Gerenciador de Login para lidar com comandos de logar, e deslogar, e verificar se  
+   existe algum usuário logado durante a execução do programa.
    #### O que tem dificuldade ainda?
-   
+   Tenho dificuldade em colocar mais de um sistema para terem seu login gerenciado pela mesma classe.
    #### Quanto tempo levou para fazer essa atividade?
-
+   levaria 8 horas.
 # Atividade do Salário - Trabalho 10.
    ## Em andamento...
    
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido no trabalho.
    #### O que aprendeu e sabe fazer?
-   
+   Noções teóricas de economia (tarifa, taxa SELIC, etc...), gerenciar o fluxo de informação de vários  
+   funcionários e como cada um tería seu próprio conjunto de regras para o calculo de salário.
    #### O que tem dificuldade ainda?
-   
+   Adicionar certos elementos.
    #### Quanto tempo levou para fazer essa atividade?
-
+   Levaria 8 horas.
 # Atividade do Trem - Trabalho 11.
    
    #### O que você fez?
@@ -180,22 +185,26 @@
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido no trabalho.
    #### O que aprendeu e sabe fazer?
-   
+   Usar o repositório para Alunos e Disciplinas, e por cima disso matricular um aluno em uma disciplina ao mesmo  
+   tempo que liga a disciplina ao aluno e vice-versa
    #### O que tem dificuldade ainda?
-   
+   Tenho um pouco de dificuldade com a lógica de tie e untie, estou tentando aplicar ela para multiplos elementos
    #### Quanto tempo levou para fazer essa atividade?
-
+   levaria 12 horas
 # Atividade do Twitter - Trabalho 13.
    ## Em andamento...
    
    #### O que você fez?
    
    #### Com quem e como você fez?
-   
+   Sozinho, estudei o conteúdo contido no trabalho.
    #### O que aprendeu e sabe fazer?
-   
+   Usar tudo ensinado anteriormente para que Usuários possam seguir uns aos outros, que eles possam twittar  
+   e ver se alguém que os seguiu twittou, dar um like no twitte, ver quem deu like em um específico, etc.
    #### O que tem dificuldade ainda?
-   
+   Na lógica de dar like e modificar um twitte para todos os usuários, mas acho que o uso de ponteiro nessa  
+   lógica pode resolver o segundo problema.
    #### Quanto tempo levou para fazer essa atividade?
+   levaria 1 dia
